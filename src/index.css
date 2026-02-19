@@ -2,95 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 228 25% 97%;
+    --foreground: 230 25% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 230 25% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 230 25% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 252 56% 57%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 228 25% 93%;
+    --secondary-foreground: 230 25% 12%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 228 20% 94%;
+    --muted-foreground: 228 12% 48%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 252 56% 57%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 56%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 228 20% 90%;
+    --input: 228 20% 90%;
+    --ring: 252 56% 57%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-bg: 240 40% 13%;
+    --sidebar-fg: 240 10% 85%;
+    --sidebar-active: 252 56% 57%;
+    --sidebar-hover: 240 30% 18%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --priority-high: 12 80% 55%;
+    --priority-medium: 38 92% 55%;
+    --priority-low: 152 60% 45%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --badge-web: 252 56% 57%;
+    --badge-mobile: 340 65% 55%;
+    --badge-dashboard: 200 70% 50%;
+    --badge-app: 12 80% 55%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 240 40% 13%;
+    --sidebar-foreground: 240 10% 85%;
+    --sidebar-primary: 252 56% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 30% 18%;
+    --sidebar-accent-foreground: 240 10% 85%;
+    --sidebar-border: 240 25% 20%;
+    --sidebar-ring: 252 56% 57%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
+    --background: 230 25% 8%;
+    --foreground: 0 0% 95%;
+    --card: 230 25% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 230 25% 12%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 252 56% 57%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 230 20% 18%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 230 20% 18%;
+    --muted-foreground: 228 12% 55%;
+    --accent: 252 56% 57%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 230 20% 20%;
+    --input: 230 20% 20%;
+    --ring: 252 56% 57%;
+    --sidebar-background: 240 40% 8%;
+    --sidebar-foreground: 240 10% 85%;
+    --sidebar-primary: 252 56% 57%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 240 30% 14%;
+    --sidebar-accent-foreground: 240 10% 85%;
+    --sidebar-border: 240 25% 15%;
+    --sidebar-ring: 252 56% 57%;
   }
 }
 
@@ -100,6 +97,41 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50 shadow-sm;
+  }
+
+  .kanban-column {
+    @apply bg-muted/30 rounded-xl p-3 min-h-[60vh];
+  }
+
+  .task-card {
+    @apply bg-card rounded-xl p-4 shadow-sm border border-border/50 cursor-grab active:cursor-grabbing transition-all duration-200 hover:shadow-md hover:-translate-y-0.5;
+  }
+
+  .task-card-dragging {
+    @apply shadow-xl rotate-2 scale-105 opacity-80;
+  }
+
+  .priority-high {
+    @apply bg-[hsl(var(--priority-high))]/10 text-[hsl(var(--priority-high))];
+  }
+
+  .priority-medium {
+    @apply bg-[hsl(var(--priority-medium))]/10 text-[hsl(var(--priority-medium))];
+  }
+
+  .priority-low {
+    @apply bg-[hsl(var(--priority-low))]/10 text-[hsl(var(--priority-low))];
+  }
+
+  .floating-chat-btn {
+    @apply fixed bottom-6 right-6 w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center z-50;
   }
 }
